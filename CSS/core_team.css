@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap");
 
-
 * {
   font-family: "Open Sans", sans-serif;
 }
@@ -18,11 +17,11 @@
 .testimonial {
   position: relative;
   max-width: 900px;
+  height: 100%;
   width: 100%;
   padding: 50px 0;
   overflow: hidden;
   background-color: #fffae5;
-  padding: 80px;
   border-radius: 30px;
   box-shadow: 7px 7px rgb(0, 0, 0);
   border: 2px solid black;
@@ -72,14 +71,14 @@
 
 .details .job {
   font-size: 12px;
-  font-weight: 400 !important;
+  font-weight: 400; /* Removed !important */
   color: #333;
 }
 
 /* swiper button css */
 .nav-btn {
-  height: 40px !important;
-  width: 40px !important;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   transform: translateY(30px);
   background-color: rgba(255, 179, 0, 0.985);
@@ -92,7 +91,7 @@
 
 .nav-btn::after,
 .nav-btn::before {
-  font-size: 20px !important;
+  font-size: 20px;
   color: #fff;
 }
 
@@ -101,7 +100,7 @@
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #000000 !important;
+  background-color: #000000;
 }
 
 .container > .testimonial > h1 {
@@ -114,11 +113,22 @@
   padding-bottom: 30px;
 }
 
-@media screen and (max-width: 600px) {
-  .slide p {
-    padding: 0 20px;
+@media screen and (max-width: 768px) {
+  .testimonial{
+    height: 90%;
   }
-  
+  .slide p {
+    font-size: 14px;
+    padding: 0 10px; /* Adjusted padding for smaller screens */
+  }
+
+  .testimonial .image {
+    height: 170px;
+    width: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
   .nav-btn {
     display: none;
   }
